@@ -4,8 +4,9 @@
   <tr>
     <td>
 
-**Project Type:** YouTube Update Tracker + Slack Reporter  
-**Agent Role:** A caffeinated content curator who serves daily creator economy news with a side of thumbnail critique and espresso-fueled insights.
+**Project Type:** Multi-Agent System (No-Code)  
+**Function:** YouTube Creator News Aggregator + Brand-Styled Digest Sender  
+**Agent Persona:** A caffeinated content curator who filters the noise and delivers high-impact creator economy news — with a side of espresso-fueled opinions.
 
 </td>
 <td align="right" width="250">
@@ -13,59 +14,110 @@
 </td>
   </tr>
 </table>
----
+
+
 
 ## 🔍 Purpose
-This agent helps busy creators, producers, and strategists stay on top of platform updates and trends without wasting time. It automatically pulls updates from trusted sources like:
 
-- YouTube Creator Insider
-- YouTube Liaison (X/Twitter)
-- Creator-focused subreddits
-- YouTube Test Features & Experiments thread
-- Experimental Blogs / News Feeds
+CreatorBrew keeps creators and strategists informed about fast-moving YouTube platform updates — without doomscrolling X or digging through Reddit threads. It pulls from trusted sources, filters for relevance, and packages a clean, context-aware daily summary.
+
+---
+
+## 💡 Project Highlights
+
+- **Pattern:** Parallel agent pattern with fallback logic  
+- **Specialized Agents:**  
+  - Retrieval Agent: Gathers headlines and posts from RSS feeds  
+  - Analysis Agent: Filters by recency and relevance  
+  - Creation Agent: Summarizes and rewrites in brand tone  
+- **Shared Memory:** Summary queue passed through workflow  
+- **Tools:** n8n + OpenAI (GPT-4) + HTML Email Formatter  
 
 ---
 
 ## ♻️ Workflow Overview
-1. **Trigger:** Scheduled daily run (e.g., 6:00 AM)
-2. **Scraper/Fetcher:** Pulls updates from pre-defined sources (RSS, API, or web scraping)
-3. **Summarizer:** Uses OpenAI/GPT to convert raw info into digestible updates
-4. **Formatter:** Converts into Slack-ready or email-ready digest
-5. **Publisher:** Posts to Slack, Email, or Notion
+
+1. **Trigger:** Daily schedule (e.g., 6:00 AM CST)
+2. **RSS Collector:** Aggregates multiple creator-focused sources
+3. **24-Hour Filter:** Removes stale or repeated content
+4. **AI Agent (CreatorBrew):** Summarizes + rewrites in styled tone
+5. **Formatter:** Converts into clean, styled HTML email
+6. **Delivery:** Sends to inbox and logs confirmation
 
 ---
 
-## 📅 Use Cases
-- Solo creators trying to stay informed
-- Channel managers or YouTube consultants
-- Teams needing a shared "morning brief"
-- Strategy decks or client updates
+## 🧠 Agent Design
+
+**Retrieval Agent**  
+- Role: Pull headlines from trusted sources  
+- Sources:  
+  - YouTube Creator Insider  
+  - @YouTubeLiaison (via RSS proxy)  
+  - Creator-focused subreddits  
+  - YouTube Experiments + Test Features  
+  - Creator Handbook RSS
+
+**Analysis Agent**  
+- Filters out noise  
+- Detects updates vs. opinion  
+- Drops anything older than 24 hours  
+
+**Creation Agent (CreatorBrew)**  
+- Brand voice application  
+- Adds editorial flair and humor  
+- Flags major updates as “Top Story”
+
+---
+
+## ☕ Use Cases
+
+- Daily update brief for YouTube creators  
+- Slack/email newsletter for creative teams  
+- Research feed for consultants and strategists  
+- Inspiration source for thumbnail/title testing
 
 ---
 
 ## 🏛️ Future Add-Ons
-- Thumbnail trend tracking
-- YouTube SEO A/B test alerts
-- Channel-specific alerts (custom queries)
-- Weekly digest archives
+
+- Thumbnail trend tracker  
+- YouTube SEO A/B test alerts  
+- Channel-specific keyword monitors  
+- Notion database archive  
+- Click-to-research buttons (NotebookLM-style)  
 
 ---
 
-## 🧥 Persona Snapshot: CreatorBrew
-- **Tone:** Energetic, strategic, highly caffeinated
-- **Look:** Vintage band tee + coffee-stained apron, steampunk goggles optional
-- **Tagline:** "Your hook needs more punch, like a double shot."
-- **Vibe Tags:** Analytical, caffeinated, curious, early-riser energy
+## 🧥 CreatorBrew Persona Snapshot
+
+- **Voice:** Analytical, energized, slightly smug  
+- **Look:** Vintage band tee, coffee-stained apron, messy tabs open  
+- **Tagline:** “Your hook needs more punch. Like a double shot.”  
+- **Vibe Tags:** caffeinated • curious • critical • efficient
 
 ---
 
-## 🔹 Status
-- [x] Project scoped
-- [ ] MVP built
-- [ ] Repo linked to scheduler
-- [ ] Live test deployed
+## ✅ Status
+
+- [x] MVP logic built in n8n  
+- [x] Agent prompts finalized  
+- [x] HTML formatter added  
+- [x] Live test in inbox  
+- [x] Optional Slack delivery  
+- [ ] Future Notion output
 
 ---
 
-## 👤 Created by Ros Talbot
-Part of the Vibe Agent series of creative automation tools.
+## 🛠 Tech Stack
+
+- No-code: **n8n**
+- LLM: **GPT-4 + GPT-4o**
+- Output: **Styled HTML Email**
+- Format: Markdown, Email
+- Hosting: Netlify (optional)
+
+---
+
+## 👤 Created by Ros Talbot  
+Part of the [Vibe Agent Series](https://github.com/RosTalbot/vibe-agent-series)  
+A bootcamp project for **AI Agent Systems Week 2** ✨
