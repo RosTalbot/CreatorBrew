@@ -4,8 +4,8 @@
   <tr>
     <td>
 
-**Project Type:** Multi-Agent System (No-Code)  
-**Function:** YouTube Creator News Aggregator + Brand-Styled Digest Sender  
+**Project Type:** Multi-Agent System (No-Code)  <br><br>
+**Function:** YouTube Creator News Aggregator + Brand-Styled Digest Sender  <br><br>
 **Agent Persona:** A caffeinated content curator who filters the noise and delivers high-impact creator economy news — with a side of espresso-fueled opinions.
 
 </td>
@@ -20,6 +20,27 @@
 ## 🔍 Purpose
 
 CreatorBrew keeps creators and strategists informed about fast-moving YouTube platform updates — without doomscrolling X or digging through Reddit threads. It pulls from trusted sources, filters for relevance, and packages a clean, context-aware daily summary.
+
+>_Skip the feeds — your AI team already brewed the news._
+
+**What it does:** Automates daily delivery of YouTube creator economy updates. Aggregates, filters, and styles news with GPT-powered agents, then delivers a clean, vibrant HTML email briefing—just for humans.
+
+**Why it matters:**  
+- Saves creators from context overload  
+- Brings content to inbox, not noise streams  
+- Transforms feed chaos into calm (and impactful) insight
+
+**Tech Snapshot:**  
+- **Workflow platform:** n8n  
+- **LLM:** GPT‑4  
+- **Sources:** YouTube blogs, RSS feeds, and curated changelogs  
+- **Delivery:** Timed HTML email (no more doomscrolling)
+
+**Persona:**  
+- Voice: Caffeinated, concise, clever  
+- Look: Blue light, vintage band tee, and a coffee-stained apron  
+- Attitude: Opinionated yet efficient  
+- Tagline: “Every hook curated, every drop worth your time.”
 
 ---
 
