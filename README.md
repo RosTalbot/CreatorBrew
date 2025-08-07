@@ -9,7 +9,7 @@
 
 </td>
 <td align="right" width="250">
-  <img src="screenshots/CreatorBrew-Avatar.png" alt="CreatorBrew Persona" width="200" />
+  <img src="screenshots/CreatorBrew-Persona.png" alt="CreatorBrew Persona" width="200" />
 </td>
   </tr>
 </table>
